@@ -22,15 +22,24 @@ function App() {
 }
 
 export default App; */}
-import Login from './component/login';
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import Text from "./pages/text";
+import Tasks from "./pages/tasks";
+import Login from "./pages/login";
 
 function App() {
-  return (
-    <div>
-      <Login />
-      <h1>Welcome to Truck Broker Application</h1>
-    </div>
-  );
+  
+  return ( 
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login/>}/>
+        <Route path="/text" element={<Text/>}/>
+        <Route path="/tasks" element={<Tasks/>}/>
+      </Routes>
+    </BrowserRouter>
+   
+   );
 }
 
-export default App;
+export default App
+; 
