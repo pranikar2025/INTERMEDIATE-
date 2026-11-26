@@ -5,7 +5,7 @@ function TaskCard(props) {
         {props.title}
       </h2>
 
-      <p className="text-2xl font-bold text-blue-700">
+      <p className="font-bold text-blue-700">
         {props.value}
       </p>
     </div>
