@@ -1,45 +1,42 @@
-{/*import './App.css';
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Login from "./User/Login";
+import Register from "./User/Register";
+import Dashboard from "./User/Dashboard";
+import Availability from "./User/Availability";
+
+import Profit from "./Transaction/Profit";
+import Balance from "./Transaction/Balance";
+
+import AdminDashboard from "./Admin/Dashboard";
+import AdminUserDetails from "./Admin/Userdetail";
+import AdminLayout from "./Admin/Adminlayout.jsx";
+import AdminSettings from "./Admin/Settings";
+
+
 function App() {
   return (
-    <div><h1 className="text-3xl font-bold text-blue-700">
-  Truck Broker Management System
-</h1>
-      <p>Welcome to Truck Broker Application</p>
-      <h2>Broker Dashboard</h2><div>
-        <h3>Total Truck</h3>
-        <p>25</p></div>
-    <div>
-        <h3>Available Trucks</h3>
-        <p>15</p></div>
-    <div>
-        <h3>Active Bookings</h3>
-        <p>8</p></div>
-     <div>
-        <h3>Total Earnings</h3>
-        <p>50000</p></div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Availability" element={<Availability />} />
+        <Route path="/Profit" element={<Profit />} />
+        <Route path="/Balance" element={<Balance />} />
+
+        {/* Admin Parent Route */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="admindashboard" element={<AdminDashboard />} />
+          <Route path="userdetails" element={<AdminUserDetails />} />
+          <Route path="settings" element={<AdminSettings />} />
+        </Route>
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App; */}
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-import Text from "./pages/text";
-import Tasks from "./pages/tasks";
-import Login from "./pages/login";
-import Taskcard from "./component/taskcard";
+export default App;
 
-function App() {
-  
-  return ( 
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login/>}/>
-        <Route path="/text" element={<Text/>}/>
-        <Route path="/tasks" element={<Tasks/>}/>
-        <Route path="/Taskcard"element={<Taskcard/>}/>
-      </Routes>
-    </BrowserRouter>
-   
-   );
-}
-export default App; 
