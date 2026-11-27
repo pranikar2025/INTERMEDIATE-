@@ -1,4 +1,4 @@
-function TaskCard(props) {
+/*function TaskCard(props) {
   return (
     <div className="bg-white p-5 rounded-lg shadow">
       <h2 className="text-lg font-bold">
@@ -12,4 +12,11 @@ function TaskCard(props) {
   );
 }
 
-export default TaskCard;
+export default TaskCard;*/
+
+function Taskcard(){
+  return(
+    <div>Taskcard</div>
+  );
+}
+export default Taskcard;

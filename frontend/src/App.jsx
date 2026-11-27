@@ -26,6 +26,7 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Text from "./pages/text";
 import Tasks from "./pages/tasks";
 import Login from "./pages/login";
+import Taskcard from "./component/taskcard";
 
 function App() {
   
@@ -35,10 +36,10 @@ function App() {
         <Route path="/" element={<Login/>}/>
         <Route path="/text" element={<Text/>}/>
         <Route path="/tasks" element={<Tasks/>}/>
+        <Route path="/Taskcard"element={<Taskcard/>}/>
       </Routes>
     </BrowserRouter>
    
    );
 }
-export default App
-; 
+export default App; 
