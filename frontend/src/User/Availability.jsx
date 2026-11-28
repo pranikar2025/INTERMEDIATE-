@@ -1,6 +1,6 @@
 function Availability() {
     return ( 
-        <div>Availability</div>
+        <div>Availabilities</div>
      );
 }
 

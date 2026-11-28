@@ -62,25 +62,20 @@ function AdminUserDetails() {
       {/* Navbar */}
       <nav className="bg-slate-900 border-b border-slate-700 px-8 py-5 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-blue-400">
-          LaneLedger
+         LaneLedger
         </h1>
 
         <div className="flex gap-6">
-          <Link to="/admin/admindashboard" className="hover:text-blue-400">
-            Dashboard
-          </Link>
+        <Link to="/admin/admindashboard" className="hover:text-blue-400">
+         Dashboard
+        </Link>
 
-          <Link to="/admin/userdetails" className="text-blue-400">
-            User Details
-          </Link>
-
-          <Link to="/admin/settings" className="hover:text-blue-400">
-            Settings
-          </Link>
-        </div>
+        <Link to="/admin/userdetails" className="text-blue-400">
+        User Details
+        </Link>
+        <Link to="/admin/settings" className="hover:text-blue-400">
+        Settings</Link></div>
       </nav>
-
-      {/* Main Content */}
       <main className="p-8">
 
         <h2 className="text-3xl font-bold mb-2">
@@ -90,22 +85,18 @@ function AdminUserDetails() {
         <p className="text-slate-400 mb-8">
           View and manage customers and truck owners.
         </p>
-
-        {/* User Summary */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
 
           <div className="bg-slate-900 border border-slate-700 p-5 rounded-xl">
             <p className="text-slate-400">Total Users</p>
             <h3 className="text-3xl font-bold mt-2">{users.length}</h3>
           </div>
-
           <div className="bg-slate-900 border border-slate-700 p-5 rounded-xl">
             <p className="text-slate-400">Customers</p>
             <h3 className="text-3xl font-bold text-blue-400 mt-2">
               {users.filter((user) => user.role === "Customer").length}
             </h3>
           </div>
-
           <div className="bg-slate-900 border border-slate-700 p-5 rounded-xl">
             <p className="text-slate-400">Truck Owners</p>
             <h3 className="text-3xl font-bold text-green-400 mt-2">
@@ -114,8 +105,6 @@ function AdminUserDetails() {
           </div>
 
         </div>
-
-        {/* Search */}
         <div className="mb-6">
           <input
             type="text"
@@ -125,8 +114,6 @@ function AdminUserDetails() {
             className="w-full md:w-96 bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 outline-none focus:border-blue-500"
           />
         </div>
-
-        {/* User Table */}
         <div className="bg-slate-900 border border-slate-700 rounded-xl p-6 overflow-x-auto">
 
           <h3 className="text-xl font-semibold mb-6">
@@ -145,16 +132,13 @@ function AdminUserDetails() {
                 <th className="p-3">Action</th>
               </tr>
             </thead>
-
             <tbody>
               {filteredUsers.map((user) => (
                 <tr key={user.id} className="border-b border-slate-800">
-
                   <td className="p-3">{user.name}</td>
                   <td className="p-3">{user.email}</td>
                   <td className="p-3">{user.phone}</td>
                   <td className="p-3">{user.role}</td>
-
                   <td className="p-3">
                     <span className={
                       user.status === "Active"
@@ -163,8 +147,7 @@ function AdminUserDetails() {
                     }>
                       {user.status}
                     </span>
-                  </td>
-
+                    </td>
                   <td className="p-3">
                     <button
                       onClick={() => deleteUser(user.id)}
@@ -172,11 +155,8 @@ function AdminUserDetails() {
                     >
                       Delete
                     </button>
-                  </td>
-
-                </tr>
+                    </td></tr>
               ))}
-
               {filteredUsers.length === 0 && (
                 <tr>
                   <td colSpan="6" className="text-center p-6 text-slate-400">

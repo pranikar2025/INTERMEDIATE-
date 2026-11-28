@@ -28,33 +28,25 @@ function AdminSettings() {
 
     console.log("Updated Settings:", settings);
   }
-
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-
-      {/* Navbar */}
       <nav className="bg-slate-900 border-b border-slate-700 px-8 py-5 flex justify-between">
         <h1 className="text-2xl font-bold text-blue-400">
           LaneLedger
         </h1>
-
         <div className="flex gap-6">
           <Link to="/admin/admindashboard" className="hover:text-blue-400">
-            Dashboard
+          Dashboard
           </Link>
-
           <Link to="/admin/userdetails" className="hover:text-blue-400">
-            User Details
+          User Details
           </Link>
-
           <Link to="/admin/settings" className="text-blue-400">
-            Settings
+          Settings
           </Link>
-        </div>
-      </nav>
-
-      {/* Settings Content */}
-      <div className="max-w-3xl mx-auto p-8">
+         </div>
+        </nav>
+        <div className="max-w-3xl mx-auto p-8">
 
         <h2 className="text-3xl font-bold mb-2">
           Account Settings
@@ -65,8 +57,6 @@ function AdminSettings() {
         </p>
 
         <form onSubmit={handleSubmit}>
-
-          {/* Profile Settings */}
           <div className="bg-slate-900 border border-slate-700 rounded-xl p-6 mb-6">
 
             <h3 className="text-xl font-semibold mb-6 text-blue-400">
@@ -104,8 +94,6 @@ function AdminSettings() {
             />
 
           </div>
-
-          {/* Business Settings */}
           <div className="bg-slate-900 border border-slate-700 rounded-xl p-6 mb-6">
 
             <h3 className="text-xl font-semibold mb-6 text-blue-400">
@@ -123,8 +111,6 @@ function AdminSettings() {
             />
 
           </div>
-
-          {/* Notification Settings */}
           <div className="bg-slate-900 border border-slate-700 rounded-xl p-6 mb-6">
 
             <h3 className="text-xl font-semibold mb-5 text-blue-400">

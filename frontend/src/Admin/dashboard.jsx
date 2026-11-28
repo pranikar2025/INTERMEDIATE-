@@ -54,23 +54,19 @@ function Dashboard() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-
-      {/* Navbar */}
-      <nav className="bg-slate-900 border-b border-slate-700 px-8 py-5 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-blue-400">
+    <nav className="bg-slate-900 border-b border-slate-700 px-8 py-5 flex justify-between items-center">
+    <h1 className="text-2xl font-bold text-blue-400">
           LaneLedger
         </h1>
 
-        <div className="flex gap-6">
-          <Link to="/Dashboard" className="text-blue-400">Dashboard</Link>
-          <Link to="/Availability" className="hover:text-blue-400">Availability</Link>
-          <Link to="/Profit" className="hover:text-blue-400">Profit</Link>
-          <Link to="/Balance" className="hover:text-blue-400">Balance</Link>
-        </div>
-      </nav>
-
-      {/* Main Content */}
-      <main className="p-8">
+       <div className="flex gap-6">
+  <Link to="/Dashboard" className="text-blue-400">Dashboard</Link>
+    <Link to="/Availability" className="hover:text-blue-400">Availability</Link>
+    <Link to="/Profit" className="hover:text-blue-400">Profit</Link>
+      <Link to="/Balance" className="hover:text-blue-400">Balance</Link>
+    </div>
+   </nav>
+   <main className="p-8">
 
         <div className="mb-8">
           <h2 className="text-3xl font-bold">Broker Dashboard</h2>
@@ -78,8 +74,6 @@ function Dashboard() {
             Welcome back! Here is your transport business overview.
           </p>
         </div>
-
-        {/* Statistics */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {stats.map((item, index) => (
@@ -98,8 +92,6 @@ function Dashboard() {
           ))}
 
         </div>
-
-        {/* Recent Bookings */}
         <div className="mt-10 bg-slate-900 border border-slate-700 rounded-xl p-6">
 
           <h2 className="text-xl font-bold mb-6">
@@ -111,9 +103,9 @@ function Dashboard() {
 
               <thead>
                 <tr className="text-slate-400 border-b border-slate-700">
-                  <th className="p-3">Customer</th>
-                  <th className="p-3">From</th>
-                  <th className="p-3">To</th>
+    <th className="p-3">Customer</th>
+    <th className="p-3">From</th>
+    <th className="p-3">To</th>
                   <th className="p-3">Truck Number</th>
                   <th className="p-3">Status</th>
                 </tr>
@@ -130,16 +122,15 @@ function Dashboard() {
                       <span className="text-green-400">
                         {booking.status}
                       </span>
-                    </td>
-                  </tr>
+                      </td>
+                      </tr>
                 ))}
-              </tbody>
+                     </tbody>
 
-            </table>
-          </div>
-        </div>
-
-      </main>
+                     </table>
+                     </div>
+                     </div>
+                      </main>
     </div>
   );
 }
